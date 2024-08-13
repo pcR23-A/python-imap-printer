@@ -95,7 +95,7 @@ def mail_check():
                                         body = part.get_payload(decode=True).decode()
                                         links = extract_links(body)
                                         logging.debug(f'Email body: {body}')
-                                        filtered_links = filter_links(links, 'ROTULO')
+                                        filtered_links = filter_links(links, 'enter your link filter here')
                                         logging.debug(f'Extracted links: {links}')
                                         for link in filtered_links:
                                             logging.debug(f'Found link: {link}')
@@ -107,7 +107,7 @@ def mail_check():
                                 logging.debug(f'Email body: {body}')
                                 links = extract_links(body)
                                 logging.debug(f'Extracted links: {links}')
-                                filtered_links = filter_links(links, 'ROTULO')
+                                filtered_links = filter_links(links, 'enter your link filter here')
                                 for link in filtered_links:
                                     logging.debug(f'Found link: {link}')
                                     print('Found link:', link)
